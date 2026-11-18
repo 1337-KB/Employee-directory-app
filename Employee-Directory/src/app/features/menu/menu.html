@@ -1,0 +1,20 @@
+<div class="sidebar" [class.open]="isSidebarOpen()">
+    <div class="sidebar-header">
+        <h1>Menu</h1>
+        <button class="close-btn" (click)="toggleSidebar()">✕</button>
+    </div>
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a routerLink="/home" routerLinkActive="active" (click)="closeSidebar()">🏠 Home</a></li>
+            <li><a routerLink="/employees" routerLinkActive="active" (click)="closeSidebar()">👥 Employees</a></li>
+            <li><a routerLink="/departments" routerLinkActive="active" (click)="closeSidebar()">🏢 Departments</a></li>
+            <li><a routerLink="/settings" routerLinkActive="active" (click)="closeSidebar()">⚙️ Settings</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar-footer">
+        <button (click)="logout()" class="logout-btn">🚪 Logout</button>
+    </div>
+</div>
+
+<!-- Overlay for mobile -->
+<div class="sidebar-overlay" [class.active]="isSidebarOpen()" (click)="closeSidebar()"></div>

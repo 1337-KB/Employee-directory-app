@@ -1,3 +1,9 @@
-<h1>Employee Directory</h1>
-<hr>
-<router-outlet></router-outlet>
+<header style="font-size: 50px; font-weight: bold; color: white; background-color: black; padding: 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;">
+  <span>Employee Directory</span>
+</header>
+
+<app-menu></app-menu>
+
+<div class="content">
+  <router-outlet style="margin: 20px;"></router-outlet>
+</div>

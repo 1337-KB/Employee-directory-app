@@ -1,0 +1,12 @@
+/* App layout styles */
+.content {
+  padding: 0;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+/* Responsive layout for larger screens */
+@media (min-width: 769px) {
+  .content {
+    margin-left: 0;
+  }
+}
