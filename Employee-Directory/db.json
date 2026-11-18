@@ -1,0 +1,26 @@
+{
+  "employees": [
+    {
+      "id": "0aPiJ1Y5Z8o",
+      "firstName": "Evans",
+      "lastName": "Frimpong",
+      "role": "Technical Analyst",
+      "email": "frimpong@gmail.com"
+    },
+    {
+      "id": "6g9ZZx0S_H4",
+      "firstName": "Janet",
+      "lastName": "Wendingo",
+      "role": "Human Resources",
+      "email": "JanWen@gmail.com"
+    },
+    {
+      "id": "cnxYit7fHuM",
+      "firstName": "Lala",
+      "lastName": "Manana",
+      "role": "Human resources",
+      "email": "lalamanana@gmail.com"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

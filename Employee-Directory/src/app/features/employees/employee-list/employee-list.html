@@ -1,0 +1,29 @@
+<input type="text" placeholder="Search employees" #searchBox (input)="searchText.set(searchBox.value)">
+<div><a routerLink="/employees/add">
+  Add Employee
+</a></div>
+@if (loading()) {
+  <p>Loading employees...</p>
+} @else {
+<ul>
+  @for (employee of filteredEmployees(); track employee.id) {
+    <li>
+      <table>
+        <tr>
+          <td>
+            <a [routerLink]="['/employees', employee.id]">
+              {{ employee.firstName }} {{ employee.lastName }}
+            </a>
+            <a [routerLink]="['/employees/edit', employee.id]" style="margin-left: 10px; ;">
+              Edit
+            </a>
+            <button (click)="deleteEmployee(employee.id)" style="margin-left: 10px;">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </table>
+    </li>
+  }
+  </ul>
+}
