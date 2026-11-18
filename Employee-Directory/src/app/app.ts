@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Menu } from './features/menu/menu';
 
@@ -9,4 +9,12 @@ import { Menu } from './features/menu/menu';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {}
+export class App {
+  @ViewChild(Menu) menu!: Menu;
+
+  toggleMenu() {
+    if (this.menu) {
+      this.menu.toggleSidebar();
+    }
+  }
+}
